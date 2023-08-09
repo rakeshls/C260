@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Niyati Singh",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -49.21,
+      "left": 222.26,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "keypad1:R1", "esp:D19", "black", [ "v14.02", "h-123.16", "v-230.61" ] ],
+    [ "keypad1:R2", "esp:D18", "green", [ "v-30.64", "h-139.83", "v-176.45" ] ],
+    [ "keypad1:R4", "esp:TX2", "red", [ "v47.36", "h-166.17", "v-235.15" ] ],
+    [ "keypad1:C1", "esp:RX2", "cyan", [ "v-1.31", "h-144.33", "v-176.68" ] ],
+    [ "keypad1:C2", "esp:D4", "gold", [ "v-9.31", "h-191.83", "v-159.48" ] ],
+    [ "keypad1:C3", "esp:D2", "blue", [ "v-15.98", "h-210.25", "v-142.41" ] ],
+    [ "keypad1:C4", "esp:D15", "violet", [ "v20.11", "h-249.33", "v-169.4" ] ],
+    [ "esp:D5", "keypad1:R3", "#8f4814", [ "h56.47", "v224.85", "h183.99" ] ]
+  ],
+  "dependencies": {}
+}
